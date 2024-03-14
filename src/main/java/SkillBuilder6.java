@@ -11,8 +11,14 @@ public class SkillBuilder6 {
 
     // replace this line with your constants
 
-    public static String findTYPattern(String s)
-    {
+    public static String findTYPattern(String s) {
         // replace this line with your code
+        String str = s.toUpperCase();
+        int t = str.indexOf('T');
+        int y = str.indexOf('Y');
+        if(t == -1 | y == -1 | y < t){
+            return "";
+        }
+        return s.substring(t,y + 1);
     }
 }
